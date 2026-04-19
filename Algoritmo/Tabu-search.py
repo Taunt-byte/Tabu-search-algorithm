@@ -54,4 +54,4 @@ distancias = [
 
 rota, distancia_min = tabu_search(distancias)
 print("Melhor rota:", rota)
-print("Distância mínima encontrada:", distancia_min)
+print("Distancia minima encontrada:", distancia_min)
