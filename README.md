@@ -1,34 +1,103 @@
-# Tabu search algorithm
+# 🧠 Tabu Search Visualizado – Problema do Caixeiro Viajante (TSP)
 
-## 🔎 O que é o **Tabu Search**?
+Projeto em Python que implementa o algoritmo de otimização **Tabu Search**, aplicado ao clássico **Problema do Caixeiro Viajante (TSP)**, com foco em **visualização dinâmica da busca em tempo real**.
 
-O **Tabu Search (Busca Tabu)** é um **metaheurístico** usado para resolver problemas de otimização complexos, onde não é fácil (ou é impossível) encontrar a solução ótima exata em pouco tempo.
-
-A ideia é:
-
-* Começar com uma solução inicial qualquer.
-* Procurar por **vizinhos** dessa solução (pequenas mudanças).
-* Escolher o melhor vizinho **mesmo que ele não seja melhor que o atual** (isso ajuda a escapar de mínimos locais).
-* Usar uma **lista tabu** (memória) para guardar os movimentos ou soluções recentes, evitando voltar sempre para os mesmos lugares (ficar preso em ciclos).
-* Depois de várias iterações, chega-se a uma solução muito boa (não garantidamente a ótima, mas próxima).
+📺 Demonstração do projeto rodando:
+https://youtu.be/zMOBDpqVJt4
 
 ---
 
-## ⚙️ Exemplo simples (Problema do Caixeiro Viajante - TSP)
+## 🚀 Objetivo do projeto
 
-Imagine um vendedor que precisa visitar 5 cidades e voltar à cidade inicial.
-Objetivo: encontrar a ordem que **minimiza a distância total**.
+O objetivo deste projeto é entender na prática como funciona um **algoritmo metaheurístico de busca**, visualizando:
 
-### Como o Tabu Search ajudaria:
+- A evolução das soluções ao longo das iterações
+- O comportamento da exploração do espaço de busca
+- O impacto da lista tabu na prevenção de ciclos
+- A melhoria progressiva da solução encontrada
 
-1. **Solução inicial**: começa com uma rota qualquer, ex: `A → B → C → D → E → A`.
-2. **Vizinhança**: troca duas cidades de lugar, por exemplo: `A → C → B → D → E → A`.
-3. **Avaliação**: calcula a distância total da nova rota.
-4. **Lista Tabu**: se já testou essa troca recentemente, não deixa repetir (tabu).
-5. **Melhor vizinho permitido**: escolhe o vizinho que dá a menor distância sem quebrar a regra do tabu.
-6. Repete o processo até atingir o **número de iterações** ou **critério de parada**.
+---
 
+## 🧠 O que é o Tabu Search?
 
-Esse código roda o Tabu Search para um **TSP com 4 cidades**.
-Ele faz trocas de cidades, evita repetições com a **lista tabu**, e tenta achar uma rota curta.
+O **Tabu Search (Busca Tabu)** é uma técnica de otimização baseada em busca local com memória.
 
+Diferente de métodos simples de melhoria local, ele evita ficar preso em ótimos locais usando uma estrutura chamada **lista tabu**, que impede revisitar soluções recentes.
+
+### 🔁 Funcionamento básico:
+
+- Parte de uma solução inicial
+- Gera vizinhos por pequenas modificações (swap de cidades)
+- Seleciona o melhor vizinho possível
+- Usa uma lista tabu para evitar ciclos
+- Repete até atingir o número de iterações
+
+---
+
+## ⚙️ Aplicação no Problema do Caixeiro Viajante (TSP)
+
+O problema consiste em encontrar a menor rota possível que visite todas as cidades exatamente uma vez e retorne ao ponto inicial.
+
+### 📍 Passos do algoritmo:
+
+1. Gera uma solução inicial aleatória
+2. Produz vizinhos trocando posições entre cidades
+3. Calcula o custo total da rota (distância percorrida)
+4. Aplica restrição da lista tabu
+5. Escolhe a melhor solução disponível
+6. Atualiza a melhor solução global encontrada
+7. Repete o processo
+
+---
+
+## 🎨 Diferencial do projeto
+
+Este projeto não apenas implementa o algoritmo, mas também inclui **visualização interativa da busca**:
+
+- 🔴 Rota atual sendo explorada
+- 🟢 Melhor solução encontrada até o momento
+- 📊 Evolução da otimização em tempo real
+- 🧠 Representação clara do comportamento da busca tabu
+
+---
+
+## 🛠 Tecnologias utilizadas
+
+- Python 🐍
+- Matplotlib 📊
+- Algoritmos de Otimização (Metaheurísticas)
+- Tabu Search
+
+---
+
+## 📚 Conceitos aplicados
+
+- Otimização combinatória
+- Busca local
+- Metaheurísticas
+- Problema do Caixeiro Viajante (TSP)
+- Estruturas de memória (lista tabu)
+- Visualização de algoritmos
+
+---
+
+## 🎯 Aprendizados
+
+Este projeto ajudou a entender:
+
+- Como algoritmos de busca exploram espaços de solução
+- Como evitar mínimos locais usando memória (tabu)
+- A importância da visualização para compreensão de algoritmos
+- Como transformar um algoritmo teórico em uma simulação observável
+
+---
+
+## 📌 Observação
+
+Este projeto tem caráter educacional, com foco em aprendizado de algoritmos de otimização e visualização de processos computacionais.
+
+---
+
+## 📺 Demonstração
+
+👉 https://youtu.be/zMOBDpqVJt4
